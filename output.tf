@@ -2,11 +2,11 @@
 
 AWS CODECOMMIT
 
-output "arn-codecommit-repository" {
+output "codecommit-repository-arn" {
   value = aws_codecommit_repository.aws_codecommit_repository_sns_trigger_email_notification
 }
 
-output "codecommit-repository_id" {
+output "codecommit-repository-id" {
   value = aws_codecommit_repository.aws_codecommit_repository_sns_trigger_email_notification
 }
 
