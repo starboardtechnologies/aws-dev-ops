@@ -1,7 +1,7 @@
 resource "aws_instance" "ec2instance" {
   count = var.instance_count
-  ami           = var.ec2_instance_ami
-  instance_type = var.ec2_instance_type
+  ami           = "ami-0cf6f5c8a62fa5da6"
+  instance_type = "t2.micro"
   tags = {
       Name = element(var.instance_tags, count.index)
   }
