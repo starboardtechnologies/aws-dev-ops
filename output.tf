@@ -10,6 +10,10 @@ output "aws-codebuild-input-s3-bucket-id" {
     value = aws_s3_bucket.aws_s3_bucket_codebuild_input
 }
 
+output "aws-s3-bucket-codebuild-input-iam-role-arn" {
+  value = aws_iam_role.aws-s3-bucket-codebuild-input-iam-role
+}
+
 ##########################################################################################
 
 AWS CODECOMMIT
