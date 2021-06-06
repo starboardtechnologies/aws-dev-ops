@@ -1,5 +1,5 @@
-resource "aws_iam_role" "aws-codebuild-iam-role" {
-  name = "aws-codebuild-iam-role"
+resource "aws_iam_role" "aws-s3-bucket-codebuild-input-iam-role" {
+  name = "aws-s3-bucket-codebuild-input-iam-role"
 
   assume_role_policy = <<EOF
 {
