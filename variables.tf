@@ -30,6 +30,16 @@ variable "aws_codecommit_repository_sns_trigger_email_notification_name" {
 
 AWS EC2
 
+variable "ec2_instance_ami" {
+  type = string
+  default = <INSERT INSTANCE AMI>
+}
+
+variable "ec2_instance_type" {
+  type = string
+  default = <INSERT INSTANCE TYPE>
+}
+
 variable "instance_count" {
   type = number
   default = 3
