@@ -6,12 +6,3 @@ resource "aws_vpc" "devops" {
   }
 }
 
-variable "vpc_count" {
-  type = number
-  default = 3
-}
-
-variable "vpc_tags" {
-  type = list
-  default = ["dev-vpc", "stage-vpc", "prod-vpc"]
-}
