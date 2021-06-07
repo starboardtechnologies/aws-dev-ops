@@ -50,6 +50,21 @@ variable "instance_tags" {
   default = ["dev-ec2instance", "stage-ec2instance", "prod-ec2instance"]
 }
 
+############################################################################################
+
+AWS VPC 
+
+variable "vpc_count" {
+  type = number
+  default = 3
+}
+
+variable "vpc_tags" {
+  type = list
+  default = ["dev-vpc", "stage-vpc", "prod-vpc"]
+}
 
 
 ############################################################################################
+
+
