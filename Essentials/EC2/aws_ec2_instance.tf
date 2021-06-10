@@ -7,13 +7,3 @@ resource "aws_instance" "ec2instance" {
   }
 }
 
-variable "instance_count" {
-  type = number
-  default = 3
-}
-
-variable "instance_tags" {
-  type = list
-  default = ["dev-ec2instance", "stage-ec2instance", "prod-ec2instance"]
-}
-
