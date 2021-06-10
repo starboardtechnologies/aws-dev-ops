@@ -52,7 +52,7 @@ variable "instance_tags" {
 
 variable "ec2_instance_placement_group" {
     type    = string 
-    default = "ec2instance-placement-group"
+    default = <INSERT INSTANCE PlACEMENT GROUP NAME>
 }
 
 ############################################################################################
