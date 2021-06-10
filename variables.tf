@@ -50,6 +50,11 @@ variable "instance_tags" {
   default = ["dev-ec2instance", "stage-ec2instance", "prod-ec2instance"]
 }
 
+variable "ec2_instance_placement_group" {
+    type    = string 
+    default = "ec2instance-placement-group"
+}
+
 ############################################################################################
 
 AWS VPC 
