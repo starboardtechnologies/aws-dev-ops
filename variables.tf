@@ -31,23 +31,28 @@ variable "aws_codecommit_repository_sns_trigger_email_notification_name" {
 AWS EC2
 
 variable "ec2_instance_ami" {
-  type = string
-  default = <INSERT INSTANCE AMI>
+  type      = string
+  default   = <INSERT INSTANCE AMI>
+}
+
+variable "ec2_instance_availability_zone" {
+    type    = string
+    default = "us-west-2a"
 }
 
 variable "ec2_instance_type" {
-  type = string
-  default = <INSERT INSTANCE TYPE>
+  type      = string
+  default   = <INSERT INSTANCE TYPE>
 }
 
-variable "instance_count" {
-  type = number
-  default = 3
+variable "ec2_instance_count" {
+  type      = number
+  default   = 3
 }
 
-variable "instance_tags" {
-  type = list
-  default = ["dev-ec2instance", "stage-ec2instance", "prod-ec2instance"]
+variable "ec2_instance_tags" {
+  type      = list
+  default   = ["dev-ec2instance", "stage-ec2instance", "prod-ec2instance"]
 }
 
 variable "ec2_instance_placement_group" {
@@ -60,12 +65,12 @@ variable "ec2_instance_placement_group" {
 AWS VPC 
 
 variable "vpc_count" {
-  type = number
-  default = 3
+  type     = number
+  default  = 3
 }
 
 variable "vpc_tags" {
-  type = list
+  type    = list
   default = ["dev-vpc", "stage-vpc", "prod-vpc"]
 }
 
