@@ -55,6 +55,11 @@ variable "ec2_instance_tags" {
   default   = ["dev-ec2instance", "stage-ec2instance", "prod-ec2instance"]
 }
 
+variable "ec2_instance_monitoring" {
+    type    = bool
+    default = true
+}
+
 variable "ec2_instance_placement_group" {
     type    = string 
     default = <INSERT INSTANCE PlACEMENT GROUP NAME>
