@@ -6,7 +6,7 @@ resource "aws_instance" "ec2instance" {
   monitoring        =  var.ec2_instance_monitoring
 
   tags = {
-      Name = element(var.instance_tags, count.index)
+      Name = element(var.ec2_instance_tags, count.index)
   }
 }
 
