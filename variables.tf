@@ -67,7 +67,21 @@ variable "ec2_instance_placement_group" {
 
 ############################################################################################
 
-AWS VPC 
+#AWS S3
+
+variable "aws_s3_bucket_codebuild_input_names" {
+    type    = list
+    default = ["devcodebuildinput", "stagecodebuildinput", "prodcodebuildinput"]
+}
+
+variable "aws_s3_bucket_codebuild_output_names" {
+    type    = list
+    default = ["devcodebuildoutput", "stagecodebuildoutput", "prodcodebuildoutput"]
+}
+
+############################################################################################
+
+#AWS VPC 
 
 variable "vpc_count" {
   type     = number
@@ -76,7 +90,7 @@ variable "vpc_count" {
 
 variable "vpc_tags" {
   type    = list
-  default = ["<INSERT DEV VPC NAME>", "<INSERT STAGE VPC NAME>", "<INSERT PROD VPC NAME>"]
+  default = [<"INSERT DEV VPC NAME">, <"INSERT STAGE VPC NAME">, <"INSERT PROD VPC NAME">]
 }
 
 ############################################################################################
