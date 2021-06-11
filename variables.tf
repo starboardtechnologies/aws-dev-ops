@@ -1,39 +1,6 @@
 ############################################################################################
 
-AWS IAM 
-
-variable "aws_s3-bucket_codebuild_input_iam_role" {
-    type    = list
-    default = ["dev-s3-bucket-codebuild-input", "stage-s3-bucket-codebuild-input", "prod-s3-bucket-codebuild-input"]
-}
-
-variable "aws_s3-bucket_codebuild_output_iam_role" {
-    type    = list
-    default = ["dev-s3-bucket-codebuild-output", "stage-s3-bucket-codebuild-output", "prod-s3-bucket-codebuild-output"]
-}
-
-############################################################################################
-
-AWS PROVIDER
-
-variable "aws_provider_region" {
-  type      = string
-  default   = <"INSERT REGION">
-}
-
-variable "aws_provider_access_key" {
-  type      = string
-  default   = <"INSERT ACCESS KEY">
-}
-
-variable "aws_provider_secret_key" {
-  type      = string
-  default   = <"INSERT SECRET KEY">
-}
-
-############################################################################################
-
-AWS CODECOMMIT
+#AWS CODECOMMIT
 
 variable "aws_codecommit_repository_sns_trigger_email_notification_name" {
   type      = string
@@ -42,7 +9,7 @@ variable "aws_codecommit_repository_sns_trigger_email_notification_name" {
 
 ############################################################################################
 
-AWS EC2
+#AWS EC2
 
 variable "ec2_instance_ami" {
   type      = string
@@ -81,6 +48,39 @@ variable "ec2_instance_placement_group" {
 
 ############################################################################################
 
+#AWS IAM 
+
+variable "aws_s3-bucket_codebuild_input_iam_role" {
+    type    = list
+    default = ["dev-s3-bucket-codebuild-input", "stage-s3-bucket-codebuild-input", "prod-s3-bucket-codebuild-input"]
+}
+
+variable "aws_s3-bucket_codebuild_output_iam_role" {
+    type    = list
+    default = ["dev-s3-bucket-codebuild-output", "stage-s3-bucket-codebuild-output", "prod-s3-bucket-codebuild-output"]
+}
+
+############################################################################################
+
+#AWS PROVIDER
+
+variable "aws_provider_region" {
+  type      = string
+  default   = <"INSERT REGION">
+}
+
+variable "aws_provider_access_key" {
+  type      = string
+  default   = <"INSERT ACCESS KEY">
+}
+
+variable "aws_provider_secret_key" {
+  type      = string
+  default   = <"INSERT SECRET KEY">
+}
+
+############################################################################################
+
 #AWS S3
 
 variable "aws_s3_bucket_codebuild_input_names" {
@@ -108,5 +108,3 @@ variable "vpc_tags" {
 }
 
 ############################################################################################
-
-
