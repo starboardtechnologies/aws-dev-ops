@@ -7,6 +7,11 @@ variable "aws_s3-bucket_codebuild_input_iam_role" {
     default = ["dev-s3-bucket-codebuild-input", "stage-s3-bucket-codebuild-input", "prod-s3-bucket-codebuild-input"]
 }
 
+variable "aws_s3-bucket_codebuild_output_iam_role" {
+    type    = list
+    default = ["dev-s3-bucket-codebuild-output", "stage-s3-bucket-codebuild-output", "prod-s3-bucket-codebuild-output"]
+}
+
 ############################################################################################
 
 AWS PROVIDER
