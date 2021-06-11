@@ -1,5 +1,14 @@
 ############################################################################################
 
+AWS IAM 
+
+variable "aws_s3-bucket_codebuild_input_iam_role" {
+    type    = list
+    default = ["dev-s3-bucket-codebuild-input", "stage-s3-bucket-codebuild-input", "prod-s3-bucket-codebuild-input"]
+}
+
+############################################################################################
+
 AWS PROVIDER
 
 variable "aws_provider_region" {
