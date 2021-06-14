@@ -117,4 +117,9 @@ variable "vpc_id" {
   default = [<INSERT DEV VPC ID>, <INSERT STAGE VPC ID>, <INSERT PROD VPC ID>]
 }
 
+variable "vpc_subnet_tags" {
+  type    = list
+  default = ["devsubnet","stagesubnet","prodsubnet",]
+}
+
 ############################################################################################
