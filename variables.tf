@@ -93,6 +93,25 @@ variable "aws_s3_bucket_codebuild_output_names" {
     default = ["devcodebuildoutput", "stagecodebuildoutput", "prodcodebuildoutput"]
 }
 
+variable "s3_bucket_static_website_hosting_name" {
+  type = list
+  default = ["devstaticwebsites3bucket","stagestaticwebsites3bucket","prodstaticwebsites3bucket"]
+}
+
+variable "s3_bucket_static_website_hosting_acl" {
+  type = list
+  default = ["private", "private", "public-read"]
+}
+
+variable "s3_bucket_static_website_hosting_tags" {
+  type = list
+  default = ["devstaticwebsites3bucket","stagestaticwebsites3bucket","prodstaticwebsites3bucket"]
+}
+
+variable "s3_bucket_static_website_hosting_versioning" {
+  type = list
+  default = ["true", "true", "true"]
+
 ############################################################################################
 
 #AWS VPC 
