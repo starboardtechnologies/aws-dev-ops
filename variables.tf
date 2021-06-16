@@ -1,3 +1,51 @@
+// = reference
+#  = default setting
+
+############################################################################################
+
+#AWS BUDGET
+
+variable "aws_budget_names" {
+    type = list 
+    default = ["devbudget", "stagebudget", "prodbudget"]
+}
+
+#"COST" or "USAGE"
+variable "aws_budget_type" {
+    type = list
+    default = ["<INSERT BUDGET TYPE>", "<INSERT BUDGET TYPE>", "<INSERT BUDGET TYPE>"]
+}
+
+#Set Budget Amount per Cycle 
+variable "aws_budget_limit_amount" {
+    type = list 
+    default = ["<INSERT DEV BUDGET LIMIT AMOUNT>","<INSERT STAGE BUDGET LIMIT AMOUNT>", "<INSERT PROD BUDGET LIMIT AMOUNT>",]
+}
+
+#Set Budget Limit Unit = "USD" or "GB"
+variable "aws_budget_limit_unit" {
+    type = list 
+    default = ["<INSERT DEV BUDGET LIMIT UNIT>", "<INSERT STAGE BUDGET LIMIT UNIT>", "<INSERT PROD BUDGET LIMIT UNIT>"]
+}
+
+#Set Budget Time Period Start (i.e.: "2021-01-01_12:00")
+variable "aws_budget_time_period_start" {
+    type = list 
+    default = ["<INSERT DEV BUDGET TIME PERIOD START>", "<INSERT STAGE BUDGET TIME PERIOD START>", "<INSERT PROD BUDGET TIME PERIOD START>"]
+}
+
+#Set Budget Time Period End (i.e.: "2022-01-01_12:00")
+variable "aws_budget_time_period_end" {
+    type = list 
+    default = ["<INSERT DEV BUDGET TIME PERIOD END>", "<INSERT STAGE BUDGET TIME PERIOD END>", "<INSERT PROD BUDGET TIME PERIOD END>"]
+}
+
+#Set Budget Time Unit = "DAILY", "MONTHLY", "ANNUALLY", or "QUARTERLY"
+variable "aws_budget_time_unit" {
+    type = list 
+    default = ["INSERT DEV BUDGET TIME UNIT", "INSERT STAGE BUDGET TIME UNIT", "INSERT PROD BUDGET TIME UNIT",]
+}
+
 ############################################################################################
 
 #AWS CODECOMMIT
