@@ -13,7 +13,7 @@ variable "aws_budget_names" {
 #"COST" or "USAGE"
 variable "aws_budget_type" {
     type = list
-    default = ["<INSERT BUDGET TYPE>", "<INSERT BUDGET TYPE>", "<INSERT BUDGET TYPE>"]
+    default = ["<INSERT DEV BUDGET TYPE>", "<INSERT STAGE BUDGET TYPE>", "<INSERT PROD BUDGET TYPE>"]
 }
 
 #Set Budget Amount per Cycle 
