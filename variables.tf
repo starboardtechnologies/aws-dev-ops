@@ -3,6 +3,30 @@
 
 ############################################################################################
 
+#AWS ATHENA
+
+variable "devops_athena_database_names" {
+    type = list
+    default = ["<INSERT_DEV_ATHENA_DATABASE_NAME>", "<INSERT_STAGE_ATHENA_DATABASE_NAME>", "<INSERT_PROD_ATHENA_DATABASE_NAME>"]
+}
+
+variable "devopsathenadatabases3buckets" {
+    type = list
+    default = ["<INSERT_DEV_ATHENA_DATABASE_S3_BUCKET>", "<INSERT_STAGE_ATHENA_DATABASE_S3_BUCKET>", "<INSERT_PROD_ATHENA_DATABASE_S3_BUCKET>"]
+}
+
+variable "devops_athena_database_s3_bucket_tags" {
+    type = list
+    default = ["<INSERT_DEV_ATHENA_DATABASE_S3_BUCKET_TAGS>", "<INSERT_STAGE_ATHENA_DATABASE_S3_BUCKET_TAGS>", "<INSERT_PROD_ATHENA_DATABASE_S3_BUCKET_TAGS>"]
+}
+
+variable "devops_athena_databases_tags" {
+    type = list
+    default = ["<INSERT_DEV_ATHENA_DATABASE_TAGS>", "<INSERT_STAGE_ATHENA_DATABASE_TAGS>", "<INSERT_PROD_ATHENA_DATABASE_TAGS>"]
+}
+
+############################################################################################
+
 #AWS BUDGET
 
 variable "aws_budget_names" {
