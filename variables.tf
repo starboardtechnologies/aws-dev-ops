@@ -134,6 +134,30 @@ variable "aws_s3-bucket_codebuild_output_iam_role" {
 
 ############################################################################################
 
+#AWS KINESIS
+
+variable "devops_aws_kinesis_streams_names" {
+    type    = list
+    default = ["devkinesisstreamname", "stagekinesisstreamname", "prodkinesisstreamname"]
+}
+
+variable "devops_aws_kinesis_stream_shard_count" {
+    type    = list
+    default = [1, 1, 1]
+}
+
+variable "devops_aws_kinesis_stream_retention_period" {
+    type    = list
+    default = [48, 48, 48]
+}
+
+variable "devops_kinesis_stream_tags" {
+    type    = list
+    default = ["devkinesisstream", "stagekinesisstream", "prodkinesisstream"]
+}
+
+############################################################################################
+
 #AWS PROVIDER
 
 variable "aws_provider_region" {
