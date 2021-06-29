@@ -156,6 +156,16 @@ variable "devops_kinesis_stream_tags" {
     default = ["devkinesisstream", "stagekinesisstream", "prodkinesisstream"]
 }
 
+variable "devops_kinesis_stream_consumer_names" {
+    type    = list
+    default = ["devkinesisstreamconsumer", "stagekinesisstreamconsumer", "prodkinesisstreamconsumer"]
+}
+
+variable "devops_kinesis_stream_consumer_stream_arns" {
+    type    = list
+    default = ["", "", ""]
+}
+
 ############################################################################################
 
 #AWS PROVIDER
