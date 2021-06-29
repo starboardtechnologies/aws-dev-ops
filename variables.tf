@@ -138,17 +138,17 @@ variable "aws_s3-bucket_codebuild_output_iam_role" {
 
 variable "devops_aws_kinesis_streams_names" {
     type    = list
-    default = ["devkinesisstreamname", "stagekinesisstreamname", "prodkinesisstreamname"]
+    default = [<INSERT_DEV_KINESIS_STREAM_NAME>, <INSERT_STAGE_KINESIS_STREAM_NAME>, <INSERT_PROD_KINESIS_STREAM_NAME>]
 }
 
 variable "devops_aws_kinesis_stream_shard_count" {
     type    = list
-    default = [1, 1, 1]
+    default = [<INSERT_DEV_KINESIS_STREAM_SHARD_COUNT>, <INSERT_STAGE_KINESIS_STREAM_SHARD_COUNT>, <INSERT_PROD_KINESIS_STREAM_SHARD_COUNT>]
 }
 
 variable "devops_aws_kinesis_stream_retention_period" {
     type    = list
-    default = [48, 48, 48]
+    default = [<INSERT_DEV_KINESIS_STREAM_RETENTION_PERIOD>, <INSERT_STAGE_KINESIS_STREAM_RETENTION_PERIOD>, <INSERT_PROD_KINESIS_STREAM_RETENTION_PERIOD>]
 }
 
 variable "devops_kinesis_stream_tags" {
@@ -158,12 +158,12 @@ variable "devops_kinesis_stream_tags" {
 
 variable "devops_kinesis_stream_consumer_names" {
     type    = list
-    default = ["devkinesisstreamconsumer", "stagekinesisstreamconsumer", "prodkinesisstreamconsumer"]
+    default = [<INSERT_DEV_KINESIS_STREAM_CONSUMER_NAME>, <INSERT_STAGE_KINESIS_STREAM_CONSUMER_NAME>, <INSERT_PROD_KINESIS_STREAM_CONSUMER_NAME>]
 }
 
 variable "devops_kinesis_stream_consumer_stream_arns" {
     type    = list
-    default = ["", "", ""]
+    default = [<INSERT_DEV_KINESIS_STREAM_CONSUMER_STREAM_ARN>, , <INSERT_STAGE_KINESIS_STREAM_CONSUMER_STREAM_ARN>, <INSERT_PROD_KINESIS_STREAM_CONSUMER_STREAM_ARN>]
 }
 
 ############################################################################################
