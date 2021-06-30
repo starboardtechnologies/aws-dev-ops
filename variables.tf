@@ -168,6 +168,40 @@ variable "devops_kinesis_stream_consumer_stream_arns" {
 
 ############################################################################################
 
+#AWS KINESIS FIREHOSE
+
+variable "devops_kinesis_firehose_delivery_streams_names" {
+    type = list
+    default = ["<INSERT_DEV_KINESIS_FIREHOSE_DELIVERY_STREAM_NAME>", "<INSERT_STAGE_KINESIS_FIREHOSE_DELIVERY_STREAM_NAME>", "<INSERT_PROD_KINESIS_FIREHOSE_DELIVERY_STREAM_NAME>"]
+}
+
+variable "devops_kinesis_firehose_s3_buckets_iam_roles_name" {
+    type    = list
+    default = ["<INSERT_DEV_KINESIS_FIREHOSE_DELIVERY_STREAM_S3_BUCKET_IAM_ROLE_NAME>", "<INSERT_STAGE_KINESIS_FIREHOSE_DELIVERY_STREAM_S3_BUCKET_IAM_ROLE_NAME>", "<INSERT_PROD_KINESIS_FIREHOSE_DELIVERY_STREAM_S3_BUCKET_IAM_ROLE_NAME>"] 
+}
+
+variable "devops_kinesis_firehose_delivery_streams_s3_configuration_role_arn" {
+    type    = list
+    default = ["<INSERT_DEV_KINESIS_FIREHOSE_DELIVERY_STREAM_S3_IAM_ROLE_ARN>", "<INSERT_STAGE_KINESIS_FIREHOSE_DELIVERY_STREAM_S3_IAM_ROLE_ARN>", "<INSERT_PROD_KINESIS_FIREHOSE_DELIVERY_STREAM_S3_IAM_ROLE_ARN>"] 
+}
+
+variable "devops_kinesis_firehose_delivery_streams_s3_configuration_bucket_arn" {
+    type    = list
+    default = ["<INSERT_DEV_KINESIS_FIREHOSE_DELIVERY_STREAM_S3_BUCKET_ARN>", "<INSERT_STAGE_KINESIS_FIREHOSE_DELIVERY_STREAM_S3_BUCKET_ARN>", "<INSERT_PROD_KINESIS_FIREHOSE_DELIVERY_STREAM_S3_BUCKET_ARN>"]
+}
+
+variable "devops_kinesis_firehose_s3_buckets" {
+    type    = list
+    default = ["<INSERT_DEV_KINESIS_FIREHOSE_DELIVERY_STREAM_S3_BUCKET_NAME>", "<INSERT_STAGE_KINESIS_FIREHOSE_DELIVERY_STREAM_S3_BUCKET_NAME>", "<INSERT_PROD_KINESIS_FIREHOSE_DELIVERY_STREAM_S3_BUCKET_NAME>"]
+}
+
+variable "devops_kinesis_firehose_s3_bucket_tags" {
+    type = list
+    default = ["devkinesisfirehoses3bucket", "stagekinesisfirehoses3bucket", "prodkinesisfirehoses3bucket"]
+}
+
+############################################################################################
+
 #AWS PROVIDER
 
 variable "aws_provider_region" {
