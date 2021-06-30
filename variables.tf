@@ -224,33 +224,33 @@ variable "aws_provider_secret_key" {
 #AWS S3
 
 variable "aws_s3_bucket_codebuild_input_names" {
-    type    = list
-    default = ["devcodebuildinput", "stagecodebuildinput", "prodcodebuildinput"]
+  type     = list
+  default  = ["devcodebuildinput", "stagecodebuildinput", "prodcodebuildinput"]
 }
 
 variable "aws_s3_bucket_codebuild_output_names" {
-    type    = list
-    default = ["devcodebuildoutput", "stagecodebuildoutput", "prodcodebuildoutput"]
+  type     = list
+  default  = ["devcodebuildoutput", "stagecodebuildoutput", "prodcodebuildoutput"]
 }
 
 variable "s3_bucket_static_website_hosting_name" {
-  type = list
-  default = ["devstaticwebsites3bucket","stagestaticwebsites3bucket","prodstaticwebsites3bucket"]
+  type     = list
+  default  = ["devstaticwebsites3bucket","stagestaticwebsites3bucket","prodstaticwebsites3bucket"]
 }
 
 variable "s3_bucket_static_website_hosting_acl" {
-  type = list
-  default = ["private", "private", "public-read"]
+  type     = list
+  default  = ["private", "private", "public-read"]
 }
 
 variable "s3_bucket_static_website_hosting_tags" {
-  type = list
-  default = ["devstaticwebsites3bucket","stagestaticwebsites3bucket","prodstaticwebsites3bucket"]
+  type     = list
+  default  = ["devstaticwebsites3bucket","stagestaticwebsites3bucket","prodstaticwebsites3bucket"]
 }
 
 variable "s3_bucket_static_website_hosting_versioning" {
-  type = list
-  default = ["true", "true", "true"]
+  type     = list
+  default  = ["true", "true", "true"]
 
 ############################################################################################
 
@@ -262,18 +262,18 @@ variable "vpc_count" {
 }
 
 variable "vpc_tags" {
-  type    = list
-  default = [<"INSERT DEV VPC NAME">, <"INSERT STAGE VPC NAME">, <"INSERT PROD VPC NAME">]
+  type      = list
+  default   = [<"INSERT DEV VPC NAME">, <"INSERT STAGE VPC NAME">, <"INSERT PROD VPC NAME">]
 }
 
 variable "vpc_id" {
-  type    = list 
-  default = [<INSERT DEV VPC ID>, <INSERT STAGE VPC ID>, <INSERT PROD VPC ID>]
+  type      = list 
+  default   = [<"INSERT DEV VPC ID">, <"INSERT STAGE VPC ID">, <"INSERT PROD VPC ID">]
 }
 
 variable "vpc_subnet_tags" {
-  type    = list
-  default = ["devsubnet","stagesubnet","prodsubnet",]
+  type      = list
+  default   = ["devsubnet","stagesubnet","prodsubnet",]
 }
 
 variable "vpc_cidr_blocks" {
