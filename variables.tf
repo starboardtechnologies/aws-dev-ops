@@ -221,6 +221,45 @@ variable "aws_provider_secret_key" {
 
 ############################################################################################
 
+#AWS REDSHIFT
+
+variable "devops_aws_redshift_cluster_identifiers" {
+    type = list
+    default = ["<INSERT_DEV_REDSHIFT_CLUSTER_IDENTIFIER>", "<INSERT_STAGE_REDSHIFT_CLUSTER_IDENTIFIER>", "<INSERT_PROD_REDSHIFT_CLUSTER_IDENTIFIER>"]
+}
+
+variable "devops_aws_redshift_cluster_database_names" {
+    type = list
+    default = ["<INSERT_DEV_REDSHIFT_CLUSTER_DATABASE_NAME>", "<INSERT_STAGE_REDSHIFT_CLUSTER_DATABASE_NAME>", "<INSERT_PROD_REDSHIFT_CLUSTER_DATABASE_NAME>"]
+}
+
+variable "devops_aws_redshift_cluster_master_username" {
+    type = list
+    default = ["<INSERT_DEV_REDSHIFT_CLUSTER_MASTER_USERNAME", "<INSERT_STAGE_REDSHIFT_CLUSTER_MASTER_USERNAME", "<INSERT_PROD_REDSHIFT_CLUSTER_MASTER_USERNAME"]
+}
+
+variable "devops_aws_redshift_cluster_master_password" {
+    type = list
+    default = ["<INSERT_DEV_REDSHIFT_CLUSTER_MASTER_PASSWORD", "<INSERT_STAGE_REDSHIFT_CLUSTER_MASTER_PASSWORD", "<INSERT_PROD_REDSHIFT_CLUSTER_MASTER_PASSWORD"]
+}
+
+variable "devops_aws_redshift_cluster_node_type" {
+    type = list
+    default = ["<INSERT_DEV_REDSHIFT_CLUSTER_NODE_TYPE", "<INSERT_STAGE_REDSHIFT_CLUSTER_NODE_TYPE", "<INSERT_PROD_REDSHIFT_CLUSTER_NODE_TYPE"]
+}
+
+variable "devops_aws_redshift_cluster_type" {
+    type = list
+    default = ["<INSERT_DEV_REDSHIFT_CLUSTER_TYPE", "<INSERT_STAGE_REDSHIFT_CLUSTER_TYPE", "<INSERT_PROD_REDSHIFT_CLUSTER_TYPE"]
+}
+
+variable "devops_aws_redshift_cluster_tags" {
+    type = list
+    default = ["devredshiftcluster", "stageredshiftcluster", "prodredshiftcluster"]
+}
+
+############################################################################################
+
 #AWS S3
 
 variable "aws_s3_bucket_codebuild_input_names" {
