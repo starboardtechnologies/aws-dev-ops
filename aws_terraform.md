@@ -10,10 +10,10 @@
 ### From your Text Editor (Visual Studio Code, Atom, SublimeText), 'cd' into your terraform folder where you've placed your resources and variables
 ### After positioning into your terraform folder, run the following commands:
 
-### terraform init
-### terraform plan
-### terraform apply
-### terraform show
+### 1.) terraform init
+### 2.) terraform plan
+### 3.) terraform apply
+### 4.) terraform show
 
 ### Run terraform destroy (if needed)
 
