@@ -11,5 +11,5 @@
 
 ### Run Terraform Destroy (if needed)
 
-####Resources are current configured to support three stages (Dev, Stage or Test, and Production Environments)
-####You can change the amount of resources you would like to have deployed by changing the "count" value located in any of the provided resource files.
+#### Resources are current configured to support three stages (Dev, Stage or Test, and Production Environments)
+#### You can change the amount of resources you would like to have deployed by changing the "count" value located in any of the provided resource files.
