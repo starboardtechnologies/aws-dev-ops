@@ -27,6 +27,20 @@ variable "devops_athena_databases_tags" {
 
 ############################################################################################
 
+#AWS AUTOSCALING
+
+variable "devops_launch_configuration_names" {
+    type = list
+    default = ["<INSERT_DEV_LAUNCH_CONFIGURATION_NAME>", "<INSERT_STAGE_LAUNCH_CONFIGURATION_NAME>", "<INSERT_PROD_LAUNCH_CONFIGURATION_NAME>",]
+}
+
+variable "devops_launch_configuration_instance_type" {
+    type = list
+    default = ["<INSERT_DEV_LAUNCH_CONFIGURATION_INSTANCE_TYPE>", "<INSERT_STAGE_LAUNCH_CONFIGURATION_INSTANCE_TYPE>", "<INSERT_PROD_LAUNCH_CONFIGURATION_INSTANCE_TYPE>"]
+}
+
+############################################################################################
+
 #AWS BUDGET
 
 variable "aws_budget_names" {
