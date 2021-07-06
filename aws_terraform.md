@@ -5,6 +5,8 @@
 ### Take what resources you need and place those resources in your main.tf file
 ### Take the affiliated resource variables and place those in your variable.tf file
 
+### Package your resource files and variable files into a folder on your laptop or computer where you will be deploying your infrastructure configuration
+
 ### Run Terraform Init
 ### Run Terraform Plan
 ### Run Terraform Apply
