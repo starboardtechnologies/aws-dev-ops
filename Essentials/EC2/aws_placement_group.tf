@@ -7,7 +7,26 @@
 #Storage optimized: D2, H1, hs1.8xlarge, I2, I3, and I3en
 #Accelerated computing: F1, G2, G3, G4dn, Inf1, P2, P3, and P3dn
 
-resource "aws_placement_group" "ec2instance" {
-  name     = "ec2instance-placement-group"
-  strategy = "cluster"
+data "aws_ami" "ubuntu" {
+  most_recent = true
+
+  filter {
+    name   = "name"
+    values = ["ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*"]
+  }
+
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
+
+  owners = ["099720109477"] # Canonical
+}
+
+
+resource "aws_launch_configuration" "devops_launch_configuration" {
+  count         = 3  
+  name          = var.devops_launch_configuration_names[count.index]
+  image_id      = data.aws_ami.ubuntu.id
+  instance_type = var.devops_launch_configuration_instance_type[count.index]
 }
