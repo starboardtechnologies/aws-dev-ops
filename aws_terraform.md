@@ -7,11 +7,15 @@
 
 ### Package your resource files and variable files into a folder on your laptop or computer where you will be deploying your infrastructure configuration
 
-### Run Terraform Init
-### Run Terraform Plan
-### Run Terraform Apply
+### From your Text Editor (Visual Studio Code, Atom, SublimeText), 'cd' into your terraform folder where you've placed your resources and variables
+### After positioning into your terraform folder, run the following commands:
 
-### Run Terraform Destroy (if needed)
+### terraform init
+### terraform plan
+### terraform apply
+### terraform show
+
+### Run terraform destroy (if needed)
 
 #### Resources are currently configured to support three stages (Dev, Stage or Test, and Production Environments)
 #### You can change the amount of resources you would like to have deployed by changing the "count" value located in any of the provided resource files.
