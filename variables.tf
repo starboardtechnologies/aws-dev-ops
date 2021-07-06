@@ -72,6 +72,16 @@ variable "devops_autoscaling_group_force_delete" {
     default = ["<INSERT_DEV_AUTOSCALING_GROUP_FORCE_DELETE", "<INSERT_STAGE_AUTOSCALING_GROUP_FORCE_DELETE", "<INSERT_PROD_AUTOSCALING_GROUP_FORCE_DELETE",]
 }
 
+variable "devops_autoscaling_group_key_tag" {
+    type = list
+    default = ["department", "department", "department",]
+} 
+
+variable "devops_autoscaling_group_value_tag" {
+    type = list
+    default = ["development", "staging", "production"]
+}
+
 ############################################################################################
 
 #AWS BUDGET
