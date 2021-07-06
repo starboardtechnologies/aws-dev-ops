@@ -29,14 +29,47 @@ variable "devops_athena_databases_tags" {
 
 #AWS AUTOSCALING
 
-variable "devops_launch_configuration_names" {
+variable "devops_autoscaling_group_names" {
     type = list
-    default = ["<INSERT_DEV_LAUNCH_CONFIGURATION_NAME>", "<INSERT_STAGE_LAUNCH_CONFIGURATION_NAME>", "<INSERT_PROD_LAUNCH_CONFIGURATION_NAME>",]
+    default = ["<INSERT_DEV_AUTOSCALING_GROUP_NAME>", "<INSERT_STAGE_AUTOSCALING_GROUP_NAME>", "<INSERT_PROD_AUTOSCALING_GROUP_NAME>",]
 }
 
-variable "devops_launch_configuration_instance_type" {
+variable "vpc_zone_identifers" {
     type = list
-    default = ["<INSERT_DEV_LAUNCH_CONFIGURATION_INSTANCE_TYPE>", "<INSERT_STAGE_LAUNCH_CONFIGURATION_INSTANCE_TYPE>", "<INSERT_PROD_LAUNCH_CONFIGURATION_INSTANCE_TYPE>"]
+    default = ["<INSERT_DEV_SUBNET_ID>", "<INSERT_STAGE_SUBNET_ID>", "<INSERT_PROD_SUBNET_ID>"]
+}
+
+variable "devops_autoscaling_groups_max_size" {
+    type = list
+    default = ["<INSERT_DEV_AUTOSCALING_GROUP_MAX_SIZE>", "<INSERT_STAGE_AUTOSCALING_GROUP_MAX_SIZE>", "<INSERT_PROD_AUTOSCALING_GROUP_MAX_SIZE>"]
+}
+
+variable "devops_autoscaling_groups_min_size" {
+    type = list
+    default = ["<INSERT_DEV_AUTOSCALING_GROUP_MIN_SIZE>", "<INSERT_STAGE_AUTOSCALING_GROUP_MIN_SIZE>", "<INSERT_PROD_AUTOSCALING_GROUP_MIN_SIZE>"]
+}
+
+# (Optional, Default: 300) Time (in seconds) after instance comes into service before checking health.
+variable "devops_autoscaling_group_health_check_grace_period" {
+    type = list
+    default = ["<INSERT_DEV_AUTOSCALING_GROUP_HEALTH_CHECK_PERIOD>", "<INSERT_STAGE_AUTOSCALING_GROUP_HEALTH_CHECK_PERIOD>", "<INSERT_PROD_AUTOSCALING_GROUP_HEALTH_CHECK_PERIOD>"]
+}
+
+#"ELB" or "EC2"
+variable "devops_autoscaling_group_health_check_type" {
+    type = list
+    default = ["<INSERT_DEV_AUTOSCALING_GROUP_HEALTH_CHECK_TYPE>", "<INSERT_STAGE_AUTOSCALING_GROUP_HEALTH_CHECK_TYPE>", "<INSERT_PROD_AUTOSCALING_GROUP_HEALTH_CHECK_TYPE>"]
+}
+
+variable "devops_autoscaling_group_desired_capacity" {
+    type = list
+    default = ["<INSERT_DEV_AUTOSCALING_GROUP_DESIRED_CAPACITY", "<INSERT_STAGE_AUTOSCALING_GROUP_DESIRED_CAPACITY", "<INSERT_PROD_AUTOSCALING_GROUP_DESIRED_CAPACITY",]
+}
+
+#default = true
+variable "devops_autoscaling_group_force_delete" {
+    type = list
+    default = ["<INSERT_DEV_AUTOSCALING_GROUP_FORCE_DELETE", "<INSERT_STAGE_AUTOSCALING_GROUP_FORCE_DELETE", "<INSERT_PROD_AUTOSCALING_GROUP_FORCE_DELETE",]
 }
 
 ############################################################################################
@@ -212,6 +245,20 @@ variable "devops_kinesis_firehose_s3_buckets" {
 variable "devops_kinesis_firehose_s3_bucket_tags" {
     type = list
     default = ["devkinesisfirehoses3bucket", "stagekinesisfirehoses3bucket", "prodkinesisfirehoses3bucket"]
+}
+
+############################################################################################
+
+#AWS LAUNCH CONFIGURATION
+
+variable "devops_launch_configuration_names" {
+    type = list
+    default = ["<INSERT_DEV_LAUNCH_CONFIGURATION_NAME>", "<INSERT_STAGE_LAUNCH_CONFIGURATION_NAME>", "<INSERT_PROD_LAUNCH_CONFIGURATION_NAME>",]
+}
+
+variable "devops_launch_configuration_instance_type" {
+    type = list
+    default = ["<INSERT_DEV_LAUNCH_CONFIGURATION_INSTANCE_TYPE>", "<INSERT_STAGE_LAUNCH_CONFIGURATION_INSTANCE_TYPE>", "<INSERT_PROD_LAUNCH_CONFIGURATION_INSTANCE_TYPE>"]
 }
 
 ############################################################################################
