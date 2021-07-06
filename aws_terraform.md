@@ -2,15 +2,16 @@
 
 ## Download Terraform (https://www.terraform.io/downloads.html)
 
+### **Option A** : place individual resource files along with your variable.tf file into a single folder 
+### **Option A** : allows you to add or remove resources in isolation much easier as opposed to deploying infrastructure from a single file
+### Example: destroying and reploying AWS VPCs generate new VPC IDs which may conflict with your variables that interpolate with resources that are dependent on past configurations
+
 ### **Option B** : Place all resources into one single main.tf file
 
 ### Take what resources you need and place those resources in your main.tf file
 ### Take the affiliated resource variables and place those in your variable.tf file
 
-### **Option A** : Place individual resource files along with your variable.tf file into a single folder 
-### **Option A** :allows you to add or remove resources in isolation much easier as opposed to deploying infrastructure from a single file
-### Example: destroying and reploying AWS VPCs generate new VPC IDs which may conflict with your variables that interpolate with resources that are dependent on past configurations
-
+### Option A or B:
 ### Package your resource files and variable files into a folder on your laptop or computer where you will be deploying your infrastructure configuration
 
 ### From your Text Editor (Visual Studio Code, Atom, SublimeText), 'cd' into your terraform folder where you've placed your resources and variables
