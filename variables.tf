@@ -363,6 +363,26 @@ variable "s3_bucket_static_website_hosting_versioning" {
   default  = ["true", "true", "true"]
 
 ############################################################################################
+    
+#AWS SAGEMAKER
+    
+variable "aws_sagemaker_domain_id" {
+    type = list
+    default = [<INSERT_DEV_AWS_SAGEMAKER_DOMAIN_ID>, <INSERT_STAGE_AWS_SAGEMAKER_DOMAIN_ID>, <INSERT_PROD_AWS_SAGEMAKER_DOMAIN_ID>]
+  }
+  
+variable "aws_sagemaker_user_profile_name" {
+    type = list
+    default = [<INSERT_DEV_AWS_SAGEMAKER_USER_PROFILE_NAME>, <INSERT_STAGE_AWS_SAGEMAKER_USER_PROFILE_NAME>, <INSERT_PROD_AWS_SAGEMAKER_USER_PROFILE_NAME>]
+  }
+
+variable "aws_sagemaker_app_name" {
+    type = list
+    default = [<INSERT_DEV_AWS_SAGEMAKER_APP_NAME>, <INSERT_STAGE_AWS_SAGEMAKER_APP_NAME>, <INSERT_PROD_AWS_SAGEMAKER_APP_NAME>]
+  }   
+    
+    
+############################################################################################
 
 #AWS VPC 
 
