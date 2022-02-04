@@ -1,4 +1,4 @@
-AWS RESOURCE VARIABLES
+#AWS RESOURCE VARIABLES
 
 // = reference
 #  = default setting
