@@ -5,7 +5,7 @@
 
 ############################################################################################
 
-#AWS ATHENA
+##AWS ATHENA
 
 variable "devops_athena_database_names" {
     type      = list
