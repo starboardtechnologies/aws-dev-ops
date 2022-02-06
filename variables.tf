@@ -29,7 +29,7 @@ variable "devops_athena_databases_tags" {
 
 #############################################################################################
 
-##AWS AUTOSCALING
+###AWS AUTOSCALING
 
 variable "devops_autoscaling_group_names" {
     type = list
