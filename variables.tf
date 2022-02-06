@@ -27,7 +27,7 @@ variable "devops_athena_databases_tags" {
     default   = ["<INSERT_DEV_ATHENA_DATABASE_TAGS>", "<INSERT_STAGE_ATHENA_DATABASE_TAGS>", "<INSERT_PROD_ATHENA_DATABASE_TAGS>"]
 }
 
-############################################################################################
+#############################################################################################
 
 ##AWS AUTOSCALING
 
